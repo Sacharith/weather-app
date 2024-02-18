@@ -89,7 +89,7 @@ export default function searchPage({}: WeatherData) {
   }
 
   return (
-    <div className='h-lvh bg-gradient-to-br from-sky-500 via-blue-500 to-blue-800'>
+    <div className='h-lvh bg-gradient-to-br from-teal-600 to-blue-700'>
       <Navbar />
       <div className='px-20'>
         
@@ -107,18 +107,18 @@ export default function searchPage({}: WeatherData) {
                   <p className='text-white font-bold text-8xl'>{weather.main.temp.toFixed()}°C</p>
                 </div>
                 <div className='ml-10'>
-                  <p className='flex items-center text-white font-light text-md leading-10'><FaThermometerHalf className='mr-2' />Feels Like: {weather.main.feels_like.toFixed()}°C</p>
-                  <p className='flex items-center text-white font-light text-md leading-10'><FaDroplet className='mr-2' /> Humidity: {weather.main.humidity}%</p>
-                  <p className='flex items-center text-white font-light text-md leading-10'><FaWind className='mr-2' />Wind Speed: {weather.wind.speed}m/s</p>
-                  <p className='flex items-center text-white font-light text-md leading-10'><FaGauge  className='mr-2' /> Pressure: {weather.main.pressure}hPa</p>
+                  <p className='flex items-center text-white font-light text-md leading-10'><FaThermometerHalf className='mr-2' />Feels Like: <span className='font-semibold'>{'\xa0'}{weather.main.feels_like.toFixed()}°C</span></p>
+                  <p className='flex items-center text-white font-light text-md leading-10'><FaDroplet className='mr-2' /> Humidity:<span className='font-semibold'>{'\xa0'}{weather.main.humidity}%</span></p>
+                  <p className='flex items-center text-white font-light text-md leading-10'><FaWind className='mr-2' />Wind Speed:<span className='font-semibold'>{'\xa0'}{weather.wind.speed}m/s</span></p>
+                  <p className='flex items-center text-white font-light text-md leading-10'><FaGauge  className='mr-2' /> Pressure:<span className='font-semibold'>{'\xa0'}{weather.main.pressure}hPa</span></p>
                 </div>
                 <div className='ml-10'>
-                  <p className='flex items-center text-white font-light text-md leading-10'><FaSun className='mr-2' /> High: {weather.main.temp_max}°C</p>
-                  <p className='flex items-center text-white font-light text-md leading-10'><FaSun className='mr-2' /> Low: {weather.main.temp_min}°C</p>
+                  <p className='flex items-center text-white font-light text-md leading-10'><FaSun className='mr-2' /> High:<span className='font-semibold'>{'\xa0'}{weather.main.temp_max}°C</span></p>
+                  <p className='flex items-center text-white font-light text-md leading-10'><FaSun className='mr-2' /> Low:<span className='font-semibold'>{'\xa0'} {weather.main.temp_min}°C</span></p>
                 </div>
-                <div className='flex ml-10'>
-                  <p className='flex flex-col text-white items-center'><FaSun className='text-7xl'/> Rise: <br /> {formatUnixTime(weather.sys.sunrise)}</p>
-                  <p className='flex flex-col text-white items-center ml-5'><TbSunset2 className='text-7xl'/> Set: <br /> {formatUnixTime(weather.sys.sunset)}</p>
+                <div className='mt-2 ml-10'>
+                  <p className='flex text-white items-center pb-5'><FaSun className='mr-2'/> Rise:<span className='font-semibold'>{'\xa0'} {formatUnixTime(weather.sys.sunrise)}</span></p>
+                  <p className='flex text-white items-center'><TbSunset2 className='mr-2'/> Set:<span className='font-semibold'>{'\xa0'}{formatUnixTime(weather.sys.sunset)}</span></p>
                 </div>
               </div>              
           </div>

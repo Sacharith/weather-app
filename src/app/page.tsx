@@ -109,7 +109,7 @@ export default function Home() {
 
 
   return (
-    <div id="main-container" className="h-lvh bg-gradient-to-br from-sky-500 via-blue-500 to-blue-800">
+    <div id="main-container" className="h-lvh bg-gradient-to-br from-teal-600 to-blue-700">
       <Navbar />
       <div className="flex px-20">
         <div id="left-pane" className=" w-1/3">

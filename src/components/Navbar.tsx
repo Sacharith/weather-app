@@ -6,11 +6,14 @@ type Props = {}
 
 const Navbar = (props: Props) => {
   return (
-    <div className="flex items-center sticky w-full text-white py-10 px-20">
-      <TiWeatherCloudy className='text-5xl'/>
+    <div className="flex items-center justify-between sticky w-full text-white py-10 px-20">
       <Link href='/'>
-        <h1 className="pl-6 font-light ">Weather</h1>
+        <TiWeatherCloudy className='text-5xl'/>
       </Link>
+      <h1 className="pl-6 font-light ">Weather</h1>
+      <button>
+        C | F
+      </button>
     </div>
   )
 }
